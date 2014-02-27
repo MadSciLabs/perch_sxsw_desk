@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<item name="root" type="6">
+	<item name="FRANCE_range" type="3">Point(589,1550,0)</item>
+	<item name="JAPAN_range" type="3">Point(589,1550,0)</item>
+	<item name="MOROCCO_range" type="3">Point(609.667,1550,0)</item>
+	<item name="ObjectSettings" type="3">Point(30,104,0)</item>
+	<item name="UGANDA_range" type="3">Point(630.333,1550,0)</item>
+	<item name="book_Sensor_range" type="3">Point(30.9997,196.333,0)</item>
+	<item name="buttonData" type="2">''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''</item>
+	<item name="defaultObject_range" type="3">Point(31.0003,165.333,0)</item>
+	<item name="framesPersistent" type="0">7</item>
+	<item name="lowerDenominator" type="1">1.000000</item>
+	<item name="objectHoverRange" type="3">Point(0,0,0)</item>
+	<item name="objectSensingData" type="2">''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''</item>
+	<item name="objectSensor_1_range" type="3">Point(51.6664,702.666,0)</item>
+	<item name="objectSensor_2_range" type="3">Point(61.9998,661.333,0)</item>
+	<item name="objectSensor_3_range" type="3">Point(30.9998,413.333,0)</item>
+	<item name="objectSensor_4_range" type="3">Point(20.6664,475.333,0)</item>
+	<item name="objectSensor_5_range" type="3">Point(20.6664,547.666,0)</item>
+	<item name="objectTouchRange" type="3">Point(0,0,0)</item>
+	<item name="percentInRange_threshold" type="1">0.016667</item>
+	<item name="product1_range" type="3">Point(30.9994,72.3325,0)</item>
+	<item name="product2_range" type="3">Point(31,175.666,0)</item>
+	<item name="product3_range" type="3">Point(30.9995,103.332,0)</item>
+	<item name="product4_range" type="3">Point(51.6666,123.999,0)</item>
+	<item name="product5_range" type="3">Point(51.666,134.333,0)</item>
+	<item name="razor_Sensor_range" type="3">Point(30.9997,175.666,0)</item>
+	<item name="showHide" type="0">0</item>
+	<item name="wallet_Sensor_range" type="3">Point(30.9997,196.333,0)</item>
+</item>

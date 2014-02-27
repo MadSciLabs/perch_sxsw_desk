@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<root>
+
+    <instance class="BACKGROUND" />
+
+    <!--
+    <instance class="slideshow"></instance>
+    -->
+
+    <!--
+    <image file="images/take_a_sample.png">
+        <position>Point(320,230,0)</position>
+    </image>
+    --> 
+    <!-- 
+    <image file="images/hole_spotlight.png">
+        <position>Point(0,0,0)</position>
+    </image>
+    -->
+
+	<perchObject>
+
+	<content>	
+
+<!--
+    		<instance class="tileRow">
+        		<position input="tileRowPos">Point(0,0,0)</position>
+    		</instance>
+    		<instance class="tileRow">
+        		<position input="tileRowPos">Point(0,100,0)</position>
+    		</instance>
+    		<instance class="tileRow">
+        		<position input="tileRowPos">Point(0,200,0)</position>
+    		</instance>
+    		<instance class="tileRow">
+        		<position input="tileRowPos">Point(0,300,0)</position>
+    		</instance>
+    		<instance class="tileRow">
+        		<position input="tileRowPos">Point(0,400,0)</position>
+    		</instance>
+    		<instance class="tileRow">
+        		<position input="tileRowPos">Point(0,500,0)</position>
+    		</instance>
+    		<instance class="tileRow">
+        		<position input="tileRowPos">Point(0,600,0)</position>
+    		</instance>
+    		<instance class="tileRow">
+        		<position input="tileRowPos">Point(0,700,0)</position>
+    		</instance>
+    		<instance class="tileRow">
+        		<position input="tileRowPos">Point(0,800,0)</position>
+    		</instance>
+-->
+
+		<instance class="videoSwitcher" name="video_switch">
+        		<position input="switch_position">Point(640,400,0)</position>
+                        <file input="content1_image">images/content_1.png</file>
+                        <file input="content2_image">images/content_2.png</file>
+		</instance>
+
+<!--
+		<instance class="logoButton" replace="1">
+                        <file input="content_image">images/logo_1.png</file>
+        		<position input="logoPosition">Point(120,700,0)</position>
+		</instance>
+
+		<instance class="logoButton" replace="2">
+                        <file input="content_image">images/logo_2.png</file>
+        		<position input="logoPosition">Point(130,100,0)</position>
+		</instance>
+-->
+	</content>
+
+	<event type="onInit">
+		<!--show>video_switch</show-->
+	</event>
+
+	</perchObject>
+
+
+    <!-- PRODUCT 1 
+    <instance class="product_toggle_razor">
+        <name input="product_name">product1</name>
+        <position input="productPos">Point(640,200,0)</position>
+        <sensingArea name="objectSensor1" input="objectSenseRect">rect(0,0,180,220)</sensingArea>
+        <position input="switch_position">Point(0,0,0)</position>
+        
+        <file input="title_image">images/title_1.png</file>
+        <file input="content1_image">images/product_2/content_1.png</file>
+        <file input="content2_image">images/product_2/content_2.png</file>
+    </instance>
+    -->
+ 
+    <!-- PRODUCT 2
+    <instance class="product_toggle">
+        <name input="product_name">product2</name>
+        <position input="productPos">Point(213,500,0)</position>
+        <sensingArea name="objectSensor2" input="objectSenseRect">rect(0,0,180,220)</sensingArea>
+        <position input="switch_position">Point(0,0,0)</position>
+                
+        <file input="title_image">images/title_1.png</file>
+        <file input="content1_image">images/product_2/content_1.png</file>
+        <file input="content2_image">images/product_2/content_2.png</file>
+    </instance>
+    -->
+    
+    
+    <!-- PRODUCT 3 
+    <instance class="product_toggle">
+        <name input="product_name">product3</name>
+        <position input="productPos">Point(1050,500,0)</position>
+        <sensingArea name="objectSensor3" input="objectSenseRect">rect(0,0,180,220)</sensingArea>
+        <position input="switch_position">Point(0,0,0)</position>
+        
+        <file input="title_image">images/title_1.png</file>
+        <file input="content1_image">images/product_3/content_1.png</file>
+        <file input="content2_image">images/product_3/content_2.png</file>
+    </instance>
+    -->
+    
+    
+    
+    <!-- particles 
+    
+	<particles name="product1">
+        <origin>Point(640,200,0)</origin>
+        <folder>images/particle_1</folder>
+        <drawColor>rgb(255,255,255)</drawColor>
+        <subscribe message="PERCH_MESSAGE"/>
+	</particles>
+	
+	<particles name="product2">
+        <origin>Point(213,500,0)</origin>
+        <folder>images/particle_2</folder>
+        <drawColor>rgb(255,255,255)</drawColor>
+        <subscribe message="PERCH_MESSAGE"/>
+	</particles>
+	
+	<particles name="product3">
+        <origin>Point(1050,500,0)</origin>
+        <folder>images/particle_3</folder>
+        <drawColor>rgb(255,255,255)</drawColor>
+        <subscribe message="PERCH_MESSAGE"/>	
+	</particles>
+	-->
+    
+</root>
