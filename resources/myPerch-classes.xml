@@ -123,10 +123,10 @@
                          <scale>Point(1,1,1)</scale>
                     </video>
                 </perchGroup>
-                
+
                 <perchGroup name="content2">
                     <video name="video" loop="regular" autoplay="1">
-                        <file input="video_file">images/product_1/videos/2.mov</file>
+                        <file input="video_file">videos/sxsw/dos.mov</file>
                         <position>Point(0,0,0)</position>
                         <scale>Point(1,1,1)</scale>
                     </video>
@@ -134,7 +134,7 @@
                 
                 <perchGroup name="content3">
                     <video name="video" loop="regular" autoplay="1">
-                        <file input="video_file">images/product_1/videos/3.mov</file>
+                        <file input="video_file">videos/sxsw/dos.mov</file>
                         <position>Point(0,0,0)</position>
                          <scale>Point(1,1,1)</scale>
                     </video>
