@@ -132,6 +132,8 @@
 
                 <position name="pos" input="pos">Point(0,0,0)</position>
 
+		<timer name="over" message="video_countdown" timerDelay="1" duration="1" repeat="none" />
+
                 <content>
                         <image name="one">
                         	<file input="content_image">images/spotlight_circle.png</file>
@@ -148,12 +150,17 @@
 
                 <event type="onPresent" >
 			<show>one</show>
-			<bubble_message message="start_video_1" />
+                        <timerReset name="over" message="video_countdown" timerDuration="2" timerDelay=".1" timerRepeat="0"/>
                 </event>
 
                 <event type="onNotPresent" >
 			<hide>one</hide>
+                        <timerReset name="over" message="video_countdown" timerDuration="60000" timerDelay=".1" timerRepeat="0"/>
                 </event>
+
+		<event type="onMessage" message="video_countdown" name="over">
+			<bubble_message message="start_video_1" />
+		</event>
 
 	  </perchObject>
         </class>
