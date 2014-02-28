@@ -52,11 +52,29 @@
     		</instance>
 -->
 
+<!--
+		<instance class="videos" name="video_switch">
+
+        		<position input="v_position">Point(640,400,0)</position>
+		</instance>
+-->
+		<video name="tvideo" loop="regular" autoplay="1">
+                        <file input="video_file">videos/sxsw/dos.mov</file>
+                        <position>Point(620,400,0)</position>
+                        <scale>Point(.5,.5,1)</scale>
+                </video>
+
+		<instance class="spotlight" name="spot">
+        		<position input="pos">Point(640,700,0)</position>
+		</instance>
+
+<!--
 		<instance class="videoSwitcher" name="video_switch">
         		<position input="switch_position">Point(640,400,0)</position>
                         <file input="content1_image">images/content_1.png</file>
                         <file input="content2_image">images/content_2.png</file>
 		</instance>
+-->
 
 <!--
 		<instance class="logoButton" replace="1">
@@ -69,10 +87,24 @@
         		<position input="logoPosition">Point(130,100,0)</position>
 		</instance>
 -->
+
+		<image name="title_1">
+                                <file input="content_image">images/title_1.png</file>
+        			<position>Point(120,300,0)</position>
+                                <show start_alpha="0" start_scale="Point( 1,1,1 )" scale="Point( 1,1,1 )" alpha="1" duration="1" repeat="none" function="linearFunc" />
+                                <hide start_alpha="1" scale="Point( 1,1,1 )" start_scale="Point( 1,1,1 )" alpha="0" duration="1" repeat="none" function="linearFunc" />
+                </image>
+
 	</content>
 
 	<event type="onInit">
-		<!--show>video_switch</show-->
+		<hide>title_1</hide>
+		<hide>tvideo</hide>
+	</event>
+
+	<event type="onMessage" message="start_video_1">
+		<show>title_1</show>
+		<show>tvideo</show>
 	</event>
 
 	</perchObject>

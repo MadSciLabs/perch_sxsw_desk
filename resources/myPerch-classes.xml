@@ -102,184 +102,44 @@
     </class>
 
 
-    <!--  video content switcher  -->
-    <class name="videoSwitcher">
-		
+    <class name="videos">
+
 		<perchObject>
-
-			<position input="switch_position">Point(0,0,0)</position>
+			<position input="v_position">Point(0,0,0)</position>
 			<content>
-                
-                <image name="video_shadow">
-                    <file>images/video_shadow_lrg.png</file>
-                    <position>Point(15,17,0)</position>
-                     <scale>Point(1,1,1)</scale>
-                </image>
-
-                <perchGroup name="content1">
-                    <video name="video" loop="regular" autoplay="1">
-                        <file input="video_file">videos/sxsw/dos.mov</file>
-                        <position>Point(0,0,0)</position>
-                         <scale>Point(1,1,1)</scale>
-                    </video>
-                </perchGroup>
-
-                <perchGroup name="content2">
-                    <video name="video" loop="regular" autoplay="1">
+               
+		    <video name="tvideo" loop="regular" autoplay="1" delay="3">
                         <file input="video_file">videos/sxsw/dos.mov</file>
                         <position>Point(0,0,0)</position>
                         <scale>Point(1,1,1)</scale>
                     </video>
-                </perchGroup>
-                
-                <perchGroup name="content3">
-                    <video name="video" loop="regular" autoplay="1">
-                        <file input="video_file">videos/sxsw/dos.mov</file>
-                        <position>Point(0,0,0)</position>
-                         <scale>Point(1,1,1)</scale>
-                    </video>
-                </perchGroup>
 
-<!--
-				<instance class="perch_button">
-					<file  input="defaultI1">images/product_1/buttons/button_3.png</file>
-					<file  input="selectI1">images/product_1/buttons/button_3_select.png</file>
-					<name input="button_name">button1</name>
-					<position input="button_position">Point(-100,175,0)</position>
-				</instance>
-
-				<instance class="perch_button">
-					<file  input="defaultI1">images/product_1/buttons/button_4.png</file>
-					<file  input="selectI1">images/product_1/buttons/button_4_select.png</file>
-					<name input="button_name">button2</name>
-					<position input="button_position">Point(0,175,0)</position>
-				</instance>
-                
-                		<instance class="perch_button">
-					<file  input="defaultI1">images/product_1/buttons/button_5.png</file>
-					<file  input="selectI1">images/product_1/buttons/button_5_select.png</file>
-					<name input="button_name">button3</name>
-					<position input="button_position">Point(100,175,0)</position>
-				</instance>
--->
-
-<!--				
-                <soundObject name="buttonSound" loop="0" multiplay="1">
-                    <file input="audio_file_name">sound/Bottle.aiff</file>
-                </soundObject>
--->             
 			</content>
-		
+
+			<event type="onHide">
+				<hide>tvideo</hide>
+			</event>
+
 			<event type="onInit">
-				<show>content1</show>
-				<hide>content2</hide>
-                		<hide>content3</hide>
-				<show>video_shadow</show>
 
-				<tell_message message="deselect">button1</tell_message>
-				<tell_message message="deselect">button2</tell_message>
-                <tell_message message="deselect">button3</tell_message>
-            </event>
-
-			<event type="onShow">
-				<show>content1</show>
-				<hide>content2</hide>
-                		<hide>content3</hide>
-				<tell_message message="select">button1</tell_message>
-				<tell_message message="deselect">button2</tell_message>
-                		<tell_message message="deselect">button3</tell_message>
 			</event>
-
-			<event type="onMessage" message="button_press" name="button1">
-				<tell_message message="select">button1</tell_message>
-				<tell_message message="deselect">button2</tell_message>
-                <tell_message message="deselect">button3</tell_message>
-				<show>content1</show>
-				<hide>content2</hide>
-                <hide>content3</hide>
-                <show>buttonSound</show>
-			</event>
-			
-			<event type="onMessage" message="button_press" name="button2">
-				<tell_message message="deselect">button1</tell_message>
-				<tell_message message="select">button2</tell_message>
-				<tell_message message="deselect">button3</tell_message>
-				<hide>content1</hide>
-				<show>content2</show>
-                <hide>content3</hide>
-                <show>buttonSound</show>
-			</event>
-            
-            <event type="onMessage" message="button_press" name="button3">
-				<tell_message message="deselect">button1</tell_message>
-				<tell_message message="deselect">button2</tell_message>
-				<tell_message message="select">button3</tell_message>
-				<hide>content1</hide>
-				<hide>content2</hide>
-                <show>content3</show>
-                <show>buttonSound</show>
-			</event>
-
 		</perchObject>
-	</class>
+    </class>
 
-        <class name="perch_button">
-                <perchObject>
-                        <name input="button_name">noname</name>
-                        <position input="button_position">Point(0,0,0)</position>
-                        <content protected="1">
 
-                                <!--  image of the button when is not selected  -->
-                                <image>
-                                        <file  input="defaultI1">images/button1.png</file>
-                                        <name>defaultGraphics</name>
-                                </image>
-
-                                <!--  image of the button when is selected  -->
-                                <image>
-                                        <file  input="selectI1">images/button1_selected.png</file>
-                                        <name>selectGraphics</name>
-                                </image>
-                                <handSensor>rect(0,15,120,120)</handSensor>
-                        </content>
-
-                        <event type="onTouchPress">
-                                <bubble_message message="button_press"/>
-                        </event>
-
-                        <event type="onInit">
-                                <show>defaultGraphics</show>
-                                <hide>selectGraphics</hide>
-                        </event>
-
-                        <event type="onMessage" message="select">
-                                <hide>defaultGraphics</hide>
-                                <show>selectGraphics</show>
-                        </event>
-
-                        <event type="onMessage" message="deselect">
-                                <show>defaultGraphics</show>
-                                <hide>selectGraphics</hide>
-                        </event>
-
-                </perchObject>
-        </class>
-
-        <class name="logoButton">
+        <class name="spotlight">
 	  <perchObject>
 
-                <position name="pos" input="logoPosition">Point(0,0,0)</position>
-
-                <name input="nameMan">noname</name>
+                <position name="pos" input="pos">Point(0,0,0)</position>
 
                 <content>
                         <image name="one">
-                        	<file input="content_image"></file>
-				<show start_alpha=".5" start_scale="Point( .85,.85,1 )" scale="Point( 1.15,1.15,1 )" alpha="1" duration="2" repeat="none" function="linearFunc" />
-                		<hide start_alpha="1" scale="Point( .85,.85,1 )" start_scale="Point( 1.15,1.15,1 )" alpha=".5" duration=".7" repeat="none" function="linearFunc" />
+                        	<file input="content_image">images/spotlight_circle.png</file>
+				<show start_alpha="0" start_scale="Point( 1,1,1 )" scale="Point( 1,1,1 )" alpha="1" duration=".5" repeat="none" function="linearFunc" />
+                		<hide start_alpha="1" scale="Point( 1,1,1 )" start_scale="Point( 1,1,1 )" alpha="0" duration=".5" repeat="none" function="linearFunc" />
 			</image>
 
-                        <sensingArea input="sensing">rect(0,0,250,150)</sensingArea>
+                        <sensingArea input="sensing">rect(0,0,100,100)</sensingArea>
                 </content>
 
                 <event type="onInit">
@@ -288,6 +148,7 @@
 
                 <event type="onPresent" >
 			<show>one</show>
+			<bubble_message message="start_video_1" />
                 </event>
 
                 <event type="onNotPresent" >
