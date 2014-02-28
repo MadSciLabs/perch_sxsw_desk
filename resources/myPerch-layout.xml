@@ -58,12 +58,18 @@
         		<position input="v_position">Point(640,400,0)</position>
 		</instance>
 -->
+
 		<video name="tvideo" loop="regular" autoplay="1">
                         <file input="video_file">videos/sxsw/dos.mov</file>
-                        <position>Point(620,400,0)</position>
-                        <scale>Point(.5,.5,1)</scale>
+                        <position>Point(620,300,0)</position>
                 </video>
 
+		<instance class="spotlight" name="spot">
+        		<position input="pos">Point(160,700,0)</position>
+		</instance>
+		<instance class="spotlight" name="spot">
+        		<position input="pos">Point(400,700,0)</position>
+		</instance>
 		<instance class="spotlight" name="spot">
         		<position input="pos">Point(640,700,0)</position>
 		</instance>
@@ -91,8 +97,8 @@
 		<image name="title_1">
                                 <file input="content_image">images/title_1.png</file>
         			<position>Point(120,300,0)</position>
-                                <show start_alpha="0" start_scale="Point( 1,1,1 )" scale="Point( 1,1,1 )" alpha="1" duration="1" repeat="none" function="linearFunc" />
-                                <hide start_alpha="1" scale="Point( 1,1,1 )" start_scale="Point( 1,1,1 )" alpha="0" duration="1" repeat="none" function="linearFunc" />
+                                <show start_alpha="0" start_scale="Point( .5,.5,1 )" scale="Point( .5,.5,1 )" alpha="1" duration="1" repeat="none" function="linearFunc" />
+                                <hide start_alpha="1" alpha="0" duration="1" repeat="none" function="linearFunc" />
                 </image>
 
 	</content>
@@ -107,6 +113,10 @@
 		<show>tvideo</show>
 	</event>
 
+	<event type="onMessage" message="stop_video_1">
+		<hide>title_1</hide>
+		<hide>tvideo</hide>
+	</event>
 	</perchObject>
 
 

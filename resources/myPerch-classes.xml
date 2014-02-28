@@ -132,7 +132,7 @@
 
                 <position name="pos" input="pos">Point(0,0,0)</position>
 
-		<timer name="over" message="video_countdown" timerDelay="1" duration="1" repeat="none" />
+		<timer name="over" message="video_countdown" timerDelay="1" duration="60000" repeat="none" />
 
                 <content>
                         <image name="one">
@@ -150,12 +150,13 @@
 
                 <event type="onPresent" >
 			<show>one</show>
-                        <timerReset name="over" message="video_countdown" timerDuration="2" timerDelay=".1" timerRepeat="0"/>
+                        <timerReset name="over" message="video_countdown" timerDuration="1" timerDelay=".1" timerRepeat="0"/>
                 </event>
 
                 <event type="onNotPresent" >
 			<hide>one</hide>
                         <timerReset name="over" message="video_countdown" timerDuration="60000" timerDelay=".1" timerRepeat="0"/>
+			<bubble_message message="stop_video_1" />
                 </event>
 
 		<event type="onMessage" message="video_countdown" name="over">

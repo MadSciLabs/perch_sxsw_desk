@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <item name="root" type="6">
-	<item name="ObjectSettings" type="3">Point(47.0001,235,0)</item>
-	<item name="buttonData" type="2">''''''''''''''''''''''</item>
-	<item name="defaultObject_range" type="3">Point(30.9998,516.667,0)</item>
+	<item name="ObjectSettings" type="3">Point(105,242,0)</item>
+	<item name="buttonData" type="2">''''''''''''''''''''''''''''</item>
+	<item name="defaultObject_range" type="3">Point(72.3321,516.667,0)</item>
 	<item name="framesPersistent" type="0">13</item>
 	<item name="lowerDenominator" type="1">0.755800</item>
-	<item name="objectHoverRange" type="3">Point(33.3332,306.667,0)</item>
-	<item name="objectSensingData" type="2">''''''''''''''''''''''</item>
+	<item name="objectHoverRange" type="3">Point(26.6665,306.667,0)</item>
+	<item name="objectSensingData" type="2">''''''''''''''''''''''''''''</item>
 	<item name="objectSensor1_range" type="3">Point(20.6656,330.666,0)</item>
 	<item name="objectSensor2_range" type="3">Point(30.9996,299.666,0)</item>
 	<item name="objectSensor3_range" type="3">Point(30.9996,227.333,0)</item>
-	<item name="objectTouchRange" type="3">Point(0,0,0)</item>
+	<item name="objectTouchRange" type="3">Point(15.9999,88,0)</item>
 	<item name="percentInRange_threshold" type="1">0.140000</item>
 	<item name="showHide" type="0">1</item>
 </item>
